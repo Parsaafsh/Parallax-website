@@ -1,0 +1,115 @@
+@import 'config';
+@import 'main-content';
+@import 'menu';
+
+@import 'gallery';
+@import 'pages';
+@import 'media';
+
+body {
+  background-color: $primary-color;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border;
+
+  &::-webkit-scrollbar {
+    background-color: rgb(25, 0, 49);
+
+    width: 10px;
+    border: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 22px;
+    background-color: rgb(144, 138, 241);
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  z-index: 5;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-weight: map-get($font-weights, normal);
+    font-size: 4rem;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    top: 800px;
+
+    &.fade {
+      @include fading;
+    }
+  }
+  .midline {
+    width: 100%;
+    width: 3px;
+    background-color: white;
+    &.fade {
+      @include fading;
+    }
+  }
+  .title1 {
+    z-index: 1;
+    position: relative;
+    top: 800px;
+    margin-top: 10px;
+    span {
+      text-shadow: 1px 1px 1px $secondary-color;
+      text-transform: uppercase;
+      color: $secondary-color;
+    }
+    &.fade {
+      @include fading;
+    }
+  }
+
+  .menuItem-link {
+    text-decoration: none;
+    color: black;
+    @include transition-ease;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .socialIcons {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    padding: 20px;
+    z-index: 7;
+    a {
+      text-decoration: none;
+    }
+    i {
+      color: white;
+      cursor: pointer;
+      margin: 5px;
+      @include transition-ease;
+      &:hover {
+        opacity: 0.8;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+footer {
+  position: fixed;
+  color: white;
+  z-index: 2;
+}

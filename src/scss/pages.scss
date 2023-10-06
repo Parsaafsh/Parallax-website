@@ -1,0 +1,158 @@
+.page1 {
+  width: 100%;
+  height: 100vh;
+
+  // background: url("../layers/whole.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: rgb(46, 0, 46);
+
+  // background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  .scroll {
+    transition: transform 0.06 linear;
+    pointer-events: none;
+  }
+  #sky-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+
+    background: url('../layers/sky-01.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  #earth-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: url('../layers/earth-01.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    top: 400px;
+  }
+  #ground-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: url('../layers/ground-01.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+  }
+  #planet {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: url('../layers/planet.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+  }
+  #leftrock {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: url('../layers/leftrock-01.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 4;
+  }
+  #rightrock {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: url('../layers/rightrock-01.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 4;
+  }
+  .filter {
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(
+      to top,
+      rgba(49, 1, 49, 0.95),
+      rgba(49, 1, 49, 0.8),
+      rgba(49, 1, 49, 0.6),
+      transparent
+    );
+    z-index: 6;
+  }
+}
+.page2 {
+  height: 120vw;
+  background-color: rgb(49, 1, 49);
+  position: relative;
+
+  overflow: hidden;
+  padding: 80px;
+  font-size: 1rem;
+  .scroll2 {
+    z-index: 10s;
+    position: relative;
+    top: 250px;
+    transition: all 0.9s ease;
+    text-align: left;
+
+    opacity: 0;
+    &.show {
+      opacity: 1;
+      transform: translateY(-140px);
+    }
+    &.headline {
+      margin-top: 60px;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 90px;
+    text-indent: 10px;
+    &::selection {
+      background-color: black;
+      color: white;
+    }
+  }
+  p {
+    line-height: 1.1;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(240, 214, 251);
+    &::selection {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+.page3 {
+  height: 80vw;
+  background-color: rgb(46, 0, 46);
+  overflow-x: hidden;
+}
+.page4 {
+  height: 60vw;
+  overflow: hidden;
+  background-color: rgb(46, 0, 46);
+  h1 {
+    margin-top: 200px;
+    position: relative;
+    right: 30%;
+    font-size: 5rem;
+  }
+}

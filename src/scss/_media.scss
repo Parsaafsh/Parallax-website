@@ -1,0 +1,16 @@
+@media (width < 580px) {
+  @include phone;
+}
+
+@media (min-width: 1081px) {
+  @include smallX;
+}
+@media (min-width: 1301px) {
+  @include normalX;
+}
+@media (min-width: 1601px) {
+  @include normalXX;
+}
+@media (min-width: 2501px) {
+  @include large;
+}
