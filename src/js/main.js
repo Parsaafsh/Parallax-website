@@ -64,27 +64,28 @@ const observer = new IntersectionObserver(
   },
 );
 
-text.forEach(scroll => {
-  observer.observe(scroll);
+text.forEach(x => {
+  observer.observe(x);
 });
 
-const gallery = document.querySelectorAll('.imageContainer');
+const galleryElement = document.querySelector('.imgContainer');
 
 const observer2 = new IntersectionObserver(
-  entires => {
-    entry.target.classList.toggle('show', entry.isIntersecting);
-    if (entry.isIntersecting) {
-      observer.unobserve(entry.target);
-    }
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        galleryElement.classList.add('show');
+        observer2.unobserve(galleryElement); // Stop observing once it's visible (optional)
+      }
+    });
   },
   {
-    threshold: 0,
+    root: null, // Use the viewport as the root
+    threshold: 0.5, // When 50% of the element is visible
   },
 );
 
-gallery.forEach(scroll => {
-  observer2.observe(scroll);
-});
+observer2.observe(galleryElement);
 
 window.addEventListener('scroll', function (e) {
   console.log(window.scrollY);
@@ -107,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth',
     });
   });
+
   const galleryPage = document.getElementById('galleryPage');
 
   galleryPage.addEventListener('click', function (event) {
@@ -117,12 +119,12 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth',
     });
   });
-  const Contact = document.getElementById('Contact');
+
+  const Contact = document.getElementById('contact');
 
   Contact.addEventListener('click', function (event) {
     event.preventDefault();
     burger.classList.remove('open');
-    s;
     dropMenu.classList.remove('open1');
     document.getElementById('page4').scrollIntoView({
       behavior: 'smooth',

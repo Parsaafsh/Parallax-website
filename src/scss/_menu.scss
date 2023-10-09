@@ -1,8 +1,6 @@
 nav {
   height: 100vh;
-  //background-color: black;
   backdrop-filter: blur(18px);
-
   @include transition-ease;
   .menuItem {
     margin: 20px;

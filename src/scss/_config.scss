@@ -276,6 +276,7 @@ $secondary-color: rgb(149, 134, 18);
   border: 3px solid white;
   animation: boxAnimation 9s ease 1 forwards;
 }
+
 @mixin fading {
   animation: fadeAway 0.5s ease-in-out 1 forwards;
 }

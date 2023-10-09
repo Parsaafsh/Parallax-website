@@ -1,10 +1,13 @@
 @import 'config';
 @import 'main-content';
 @import 'menu';
-
 @import 'gallery';
 @import 'pages';
 @import 'media';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: $primary-color;
