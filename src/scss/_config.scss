@@ -39,6 +39,14 @@ $secondary-color: rgb(149, 134, 18);
 // screen types//
 
 @mixin phone {
+  .page1 {
+    #st {
+      font-size: 2rem;
+    }
+    #diu {
+      font-size: 1rem;
+    }
+  }
   .page2 {
     overflow-y: visible;
     &::-webkit-scrollbar {
@@ -51,11 +59,11 @@ $secondary-color: rgb(149, 134, 18);
     }
   }
   .page3 {
-    height: 30vh;
+    height: 60vh;
     .imgContainer {
       &.show {
-        margin-top: 40vw;
-        height: 20%;
+        margin-top: 70vw;
+        height: 60%;
         .item {
           top: 60%;
           margin: 0;
@@ -79,7 +87,32 @@ $secondary-color: rgb(149, 134, 18);
     }
   }
   .page4 {
-    height: 100vh;
+    height: 150vh;
+    padding: 20px;
+    h1 {
+      font-size: 3rem;
+      left: 2%;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+    .contactContainer {
+      .socialIcons2 {
+        margin-left: 1rem;
+        padding: 20px;
+
+        i {
+          color: white;
+          cursor: pointer;
+          margin: 0px;
+          @include transition-ease;
+          &:hover {
+            opacity: 0.8;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -152,7 +185,7 @@ $secondary-color: rgb(149, 134, 18);
     .imgContainer {
       &.show {
         margin-top: 35vw;
-        height: 80%;
+        height: 50%;
         .item {
           &:nth-child(3) {
             left: 77%;
@@ -166,6 +199,9 @@ $secondary-color: rgb(149, 134, 18);
         }
       }
     }
+  }
+  .page4 {
+    height: 100vw;
   }
 }
 @mixin normalXX {
@@ -206,7 +242,7 @@ $secondary-color: rgb(149, 134, 18);
     .imgContainer {
       &.show {
         margin-top: 35vw;
-        height: 80%;
+        height: 70%;
         .item {
           &:nth-child(3) {
             left: 77%;

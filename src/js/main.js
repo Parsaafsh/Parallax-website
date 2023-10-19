@@ -98,36 +98,28 @@ window.addEventListener('beforeunload', function (e) {
 });
 
 const about = document.getElementById('about');
+const Contact = document.getElementById('contact');
+const galleryPage = document.getElementById('galleryPage');
 
 document.addEventListener('DOMContentLoaded', function () {
-  about.addEventListener('click', function (event) {
+  function handleMenuItemClick(event, targetPageId) {
     event.preventDefault();
     burger.classList.remove('open');
     dropMenu.classList.remove('open1');
-    document.getElementById('page2').scrollIntoView({
+    document.getElementById(targetPageId).scrollIntoView({
       behavior: 'smooth',
     });
+  }
+
+  about.addEventListener('click', event => {
+    handleMenuItemClick(event, 'page2');
   });
 
-  const galleryPage = document.getElementById('galleryPage');
-
-  galleryPage.addEventListener('click', function (event) {
-    event.preventDefault();
-    burger.classList.remove('open');
-    dropMenu.classList.remove('open1');
-    document.getElementById('page3').scrollIntoView({
-      behavior: 'smooth',
-    });
+  galleryPage.addEventListener('click', event => {
+    handleMenuItemClick(event, 'page3');
   });
 
-  const Contact = document.getElementById('contact');
-
-  Contact.addEventListener('click', function (event) {
-    event.preventDefault();
-    burger.classList.remove('open');
-    dropMenu.classList.remove('open1');
-    document.getElementById('page4').scrollIntoView({
-      behavior: 'smooth',
-    });
+  Contact.addEventListener('click', event => {
+    handleMenuItemClick(event, 'page4');
   });
 });

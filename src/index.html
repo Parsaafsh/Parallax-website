@@ -39,12 +39,7 @@
     <main>
       <section class="mainContent">
         <div class="page1 page" id="page1">
-          <!-- <div
-            id="leftrock"
-            class="scroll"
-            data-direction="horizontal"
-            data-speed="-700"
-          ></div> -->
+          
           <div
             id="planet"
             class="scroll"
@@ -72,11 +67,11 @@
             data-direction="vertical"
             data-scaleSpeed="1.9"
           ></div>
-          <h1 class="title scroll" data-direction="vertical" data-speed="-800">
+          <h1 class="title scroll" id="st" data-direction="vertical" data-speed="-800">
             SPACE TRAVELING
           </h1>
 
-          <h2 class="title1 scroll" data-direction="vertical" data-speed="-750">
+          <h2 class="title1 scroll" id="diu" data-direction="vertical" data-speed="-750">
             DIVE INTO <span>UNKNOWN</span>
           </h2>
           <div class="shuttleWrapper">
@@ -222,7 +217,7 @@
               <div
                 class="item"
                 style="
-                  background-image: url(./assets/1000_F_324253049_w719tR7k9HIohO3RHFCNeekxUqC6bC6O.jpg);
+                  background-image: url(./assets/ultra-detailed-nebula-abstract-wallpaper-4.jpg);
                 "
               >
                 <div class="name">Nebula abstract</div>
@@ -240,16 +235,60 @@
         </div>
 
         <div class="page4 page" id="page4">
-          <h1>Contact</h1>
+          <h1>Contact us</h1>
+          <div class="contactContainer">
+            <p>
+              If you have any questions or feedback, feel free to reach out to
+              us.
+            </p>
+            <form action="mailto:contact@yourwebsite.com" method="post">
+              <label for="name"></label>
+              <input
+                class="input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name:"
+                required
+              /><br />
+
+              <label for="email"></label>
+              <input
+                class="input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email:"
+                required
+              /><br />
+
+              <label for="message"></label>
+              <textarea id="message" name="message" rows="10" placeholder="Message:" required></textarea
+              ><br />
+
+              <input class="button" type="submit" value="Send Message" />
+            </form>
+            <br>
+
+            <p>Or connect with us on social media:</p>
+            
+            <div class="socialIcons2">
+              <a href="#!">
+                <i class="fab fa-youtube fa-2x"></i>
+              </a>
+              <a href="#!">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+              <a href="#!">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a href="#!">
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+          </div>
         </div>
       </section>
 
-      <div class="intro">
-        <div class="explanations"></div>
-      </div>
-      <div class="GalleryWrapper">
-        <div class="Gallery"></div>
-      </div>
       <script src="./js/main.js"></script>
       <script src="./js/gallery.js"></script>
     </main>
